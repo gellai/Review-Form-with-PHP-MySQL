@@ -43,7 +43,6 @@ $param = array(
     <body>
         <div class="container">
             <h1>Customer Reviews</h1>
-
             <? if(isset($reviews)): ?>
                 <ul class="list-group">
                     <?php foreach($reviews as $review): ?>
@@ -56,16 +55,21 @@ $param = array(
                                     <small class="text-muted"><?= substr($review['create_date'], 0, 16) ?></small>
                                 </span>    
                             </p>
+                            
                             <div class="star-rating small">
-                                <input type="radio" id="<?= $review['id'] ?>_rate5" name="formRating" disabled<?= $review['rating'] == '5' ? " checked" : "" ?> /><label for="<?= $review['id'] ?>_rate5"></label>
-                                <input type="radio" id="<?= $review['id'] ?>_rate4" name="formRating" disabled<?= $review['rating'] == '4' ? " checked" : "" ?> /><label for="<?= $review['id'] ?>_rate4"></label>
-                                <input type="radio" id="<?= $review['id'] ?>_rate3" name="formRating" disabled<?= $review['rating'] == '3' ? " checked" : "" ?> /><label for="<?= $review['id'] ?>_rate3"></label>
-                                <input type="radio" id="<?= $review['id'] ?>_rate2" name="formRating" disabled<?= $review['rating'] == '2' ? " checked" : "" ?> /><label for="<?= $review['id'] ?>_rate2"></label>
-                                <input type="radio" id="<?= $review['id'] ?>_rate1" name="formRating" disabled<?= $review['rating'] == '1' ? " checked" : "" ?> /><label for="<?= $review['id'] ?>_rate1"></label>
+                                <input type="radio" id="<?= $review['id'] ?>_rate5" name="formRating" disabled<?= $review['rating'] == '5' ? " checked" : "" ?> />
+                                <label for="<?= $review['id'] ?>_rate5"></label>
+                                <input type="radio" id="<?= $review['id'] ?>_rate4" name="formRating" disabled<?= $review['rating'] == '4' ? " checked" : "" ?> />
+                                <label for="<?= $review['id'] ?>_rate4"></label>
+                                <input type="radio" id="<?= $review['id'] ?>_rate3" name="formRating" disabled<?= $review['rating'] == '3' ? " checked" : "" ?> />
+                                <label for="<?= $review['id'] ?>_rate3"></label>
+                                <input type="radio" id="<?= $review['id'] ?>_rate2" name="formRating" disabled<?= $review['rating'] == '2' ? " checked" : "" ?> />
+                                <label for="<?= $review['id'] ?>_rate2"></label>
+                                <input type="radio" id="<?= $review['id'] ?>_rate1" name="formRating" disabled<?= $review['rating'] == '1' ? " checked" : "" ?> />
+                                <label for="<?= $review['id'] ?>_rate1"></label>
                             </div>
 
                             <h3 class="text-primary"><?= $review['title'] ?></h3>
-
                             <p><?= $review['review'] ?></p>    
                         </li></form>
                     <?php endforeach; ?>
@@ -73,7 +77,6 @@ $param = array(
             <?php endif; ?>
 
             <h2>New Review</h2>
-
             <?php if(isset($messages)): ?>
                 <?php foreach($messages as $message): ?>
                     <p class="alert alert-success"><?= $message ?></p>
@@ -127,7 +130,9 @@ $param = array(
 
                 <div class="form-group<?= isset($errors['formReviewError']) ? " has-error" : "" ?>">
                     <label for="reviewFormReview">Review</label>
-                    <textarea class="form-control" id="reviewFormReview" name="formReview" rows='10' cols='50' maxlength="2000" placeholder="Max 2000 characters"><?= isset($formValues['formReviewValue']) ? $formValues['formReviewValue'] : "" ?></textarea>
+                    <textarea class="form-control" id="reviewFormReview" name="formReview" rows='10' cols='50' maxlength="2000" placeholder="Max 2000 characters">
+                        <?= isset($formValues['formReviewValue']) ? $formValues['formReviewValue'] : "" ?>
+                    </textarea>
                 </div>
 
                 <div class="form-group <?= isset($errors['formCaptchaError']) ? " has-error" : "" ?>">
