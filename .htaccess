@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteRule ^admin?$ admin.php
+RewriteRule ^login?$ login.php
+
+Options -Indexes
