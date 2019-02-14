@@ -120,11 +120,16 @@ $param = array(
                             if(isset($formValues['formRatingValue']) && $formValues['formRatingValue'] == '4') { $formRatingValue = 4; }
                             if(isset($formValues['formRatingValue']) && $formValues['formRatingValue'] == '5') { $formRatingValue = 5; }
                         ?>    
-                        <input type="radio" id="rate5" name="formRating" value="5"<?= $formRatingValue == 5 ? " checked" : "" ?> /><label for="rate5"></label>
-                        <input type="radio" id="rate4" name="formRating" value="4"<?= $formRatingValue == 4 ? " checked" : "" ?> /><label for="rate4"></label>
-                        <input type="radio" id="rate3" name="formRating" value="3"<?= $formRatingValue == 3 ? " checked" : "" ?>/><label for="rate3"></label>
-                        <input type="radio" id="rate2" name="formRating" value="2"<?= $formRatingValue == 2 ? " checked" : "" ?> /><label for="rate2"></label>
-                        <input type="radio" id="rate1" name="formRating" value="1"<?= $formRatingValue == 1 ? " checked" : "" ?> /><label for="rate1"></label>
+                        <input type="radio" id="rate5" name="formRating" value="5"<?= $formRatingValue == 5 ? " checked" : "" ?> />
+                        <label for="rate5"></label>
+                        <input type="radio" id="rate4" name="formRating" value="4"<?= $formRatingValue == 4 ? " checked" : "" ?> />
+                        <label for="rate4"></label>
+                        <input type="radio" id="rate3" name="formRating" value="3"<?= $formRatingValue == 3 ? " checked" : "" ?>/>
+                        <label for="rate3"></label>
+                        <input type="radio" id="rate2" name="formRating" value="2"<?= $formRatingValue == 2 ? " checked" : "" ?> />
+                        <label for="rate2"></label>
+                        <input type="radio" id="rate1" name="formRating" value="1"<?= $formRatingValue == 1 ? " checked" : "" ?> />
+                        <label for="rate1"></label>
                     </div>
                 </div>
 
