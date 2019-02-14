@@ -23,3 +23,6 @@ The admin page is available from:
 ```
 Login credentials are displayed there.
 
+
+## TO DO
+- Pagination
