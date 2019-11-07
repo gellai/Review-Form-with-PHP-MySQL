@@ -16,7 +16,7 @@
  *  DB      - Name of the database
  *
  */
-abstract class Db
+class Db
 {
     const HOST = "localhost";   // Domain/IP address
     const USER = "";            // Username
