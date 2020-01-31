@@ -1,14 +1,7 @@
 <?php 
 session_start();    
 
-/**
- * Autoload classes
- * @param type $className
- * @return type
- */
-function __autoload($className) {    
-    return include_once('classes/' . $className . '.php');
-}
+require('autoloader.php');
 
 // Instatntiet Admin class and
 // check if user is logged in
