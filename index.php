@@ -1,14 +1,7 @@
 <?php 
 session_start();
 
-/**
- * Auto load classes
- * @param type $className
- * @return type
- */
-function __autoload($className) {    
-    return include_once('classes/' . $className . '.php');
-}
+require('autoloader.php');
 
 $form = new Form;
 $reviews = $form->loadActiveRevies();
