@@ -18,10 +18,11 @@
  */
 class Db
 {
-    const HOST = "localhost";   // Domain/IP address
-    const USER = "";            // Username
-    const PASS = "";            // Password
-    const DB   = "";            // Database name
+    // Sample database connection 
+    const HOST = "localhost";                   // Domain/IP address
+    const USER = "user";                        // Username
+    const PASS = "password";                    // Password
+    const DB   = "review-form-with-php-mysql";  // Database name
 
     protected $_db,
               $_databaseError;
