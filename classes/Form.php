@@ -114,6 +114,7 @@ class Form extends Db
     public function getCurrentURL() {
         $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != "" ? 'https' : 'http';
         $url = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        $url = str_replace("index.php", "", $url);
         
         return $url;
     }
