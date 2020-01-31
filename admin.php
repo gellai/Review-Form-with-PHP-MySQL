@@ -49,7 +49,7 @@ $errors = $admin->_errors;              // Get error messages
                 <?php endforeach; ?>
             <?php endif; ?>
 
-            <? if(isset($reviews)): ?>
+            <?php if(isset($reviews)): ?>
                 <ul class="list-group">
                     <?php foreach($reviews as $review): ?>
                         <li class="list-group-item<?= $review['is_deleted'] ? " disabled" : "" ?>">
