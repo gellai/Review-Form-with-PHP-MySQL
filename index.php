@@ -55,7 +55,7 @@ $param = array(
             <?php endif; ?>
 
             <h1>Customer Reviews</h1>
-            <? if(isset($reviews)): ?>
+            <?php if(isset($reviews)): ?>
                 <ul class="list-group">
                     <?php foreach($reviews as $review): ?>
                         <form><li class="list-group-item">
